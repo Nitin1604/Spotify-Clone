@@ -1,0 +1,120 @@
+body {
+    background-color: antiquewhite;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* Inserting styles to the nav's ul */
+nav ul {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    height: 50px;
+    background-color: black;
+    color: aliceblue;
+}
+
+/* Inserting styles to the brand's img */
+.brand img {
+    width: 44px;
+    padding: 0 8px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    font-weight: bolder;
+    font-size: 1.3rem;
+}
+
+nav ul li {
+    padding: 0 12px;
+}
+
+.bottom {
+    position: sticky;
+    height: 13 0px;
+    background-color: black;
+    color: white;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 75px;
+    flex-direction: column;
+}
+
+.container {
+    min-height: 72vh;
+    background-color: black;
+    color: rgb(251, 243, 243);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    display: flex;
+    width: 70%;
+    margin: 23px auto;
+    border-radius: 12px;
+    padding: 34px;
+    background-image: url('image/background.jpg');
+}
+/* progress bar above the play , backward and forward button */
+#myProgressBar {
+    width: 80vw;
+    cursor: pointer;
+}
+
+.fa-solid {
+    margin-left: 30px;
+}
+
+.icons {
+    margin-top: 14px;
+}
+
+.icons i {
+    cursor: pointer;
+}
+
+.songItem {
+    height: 106px;
+    display: flex;
+    background-color: white;
+    width: 241px;
+    color: black;
+    margin: 12px 0;
+    border-radius: 12px;
+    justify-content: space-between;
+}
+
+.songItem img {
+    height: 106px;
+}
+
+.timestamp {
+    margin: 0 23px;
+}
+
+.img7 {
+    width: 107px;
+}
+
+.songItemContainer {
+    margin-top: 74px;
+}
+
+.songInfo {
+    position: absolute;
+    left: 10vw;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.songInfo img {
+    opacity: 0;
+    transition: opacity 0.4s ease-in;
+}

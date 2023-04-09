@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify Clone - Listen your favourite songs here</title>
+    <!-- My created css -->
+    <link rel="stylesheet" href="style.css">
+    <!-- My created css -->
+</head>
+
+<body>
+    <!-- nav bar block start here -->
+    <nav>
+        <ul>
+            <li class="brand"><img src="image/logo.png" alt="image not found">Spotify </li>
+            <li>Home</li>
+            <li>About</li>
+        </ul>
+    </nav>
+    <!-- nav bar block ends here -->
+
+    <!-- container block start here -->
+    <div class="container">
+        <div class="songList">
+            <h1>Popular Songs</h1>
+            <div class="songItemContainer">
+                <div class="songItem">
+                    <img src="covers/cover1.jpg" alt="Image not found">
+                    <span>Let me Love You.</span>
+                    <span class="songlistplay">
+                        <span class="timestamp">05:40</span>
+                        <i class="fa-2x fa-solid fa-play"></i>
+                    </span>
+                </div>
+
+                <div class="songItem">
+                    <img src="covers/cover2.jpg" alt="Image not found">
+                    <span>Cielo</span>
+                    <span class="songlistplay">
+                        <span class="timestamp">02:33</span>
+                        <i class="fa-2x fa-solid fa-play"></i>
+                    </span>
+                </div>
+                <div class="songItem">
+                    <img src="covers/cover3.jpg" alt="Image not found">
+                    <span>Jaane kyun ishq hua</span>
+                    <span class="songlistplay">
+                        <span class="timestamp">04:33</span>
+                        <i class="fa-2x fa-solid fa-play"></i>
+                    </span>
+                </div>
+                <div class="songItem">
+                    <img src="covers/cover4.jpg" alt="Image not found">
+                    <span>We can't forgot your love</span>
+                    <span class="songlistplay">
+                        <span class="timestamp">04:27</span>
+                        <i class="fa-2x fa-solid fa-play"></i>
+                    </span>
+                </div>
+                <div class="songItem">
+                    <img src="covers/cover5.jpg" alt="Image not found">
+                    <span>Janji - Heros Tonight</span>
+                    <span class="songlistplay">
+                        <span class="timestamp">03:28</span>
+                        <i class="fa-2x fa-solid fa-play"></i>
+                    </span>
+                </div>
+                <div class="songItem">
+                    <img src="covers/cover6.jpg" alt="Image not found">
+                    <span>Janji - Heros Tonight Lyrics</span>
+                    <span class="songlistplay">
+                        <span class="timestamp">09:55</span>
+                        <i class="fa-2x fa-solid fa-play"></i>
+                    </span>
+                </div>
+                <div class="songItem">
+                    <img class="img7" src="covers/cover7.jpg" alt="Image not found">
+                    <span>Back it up!!</span>
+                    <span class="songlistplay">
+                        <span class="timestamp">07:00</span>
+                        <i class="fa-2x fa-solid fa-play"></i>
+                    </span>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="songBanner">
+            <h1>Song Banner</h1>
+        </div>
+    </div>
+    <!-- container block ends here -->
+
+    <div class="bottom">
+        <input type="range" name="range" id="myProgressBar" min="0" value="0" max="100">
+        <!-- icons block start here -->
+        <div class="icons">
+            <!-- font awesome icons -->
+            <i class="fa-2x fa-solid fa-backward"></i>
+            <i class="fa-2x fa-solid fa-play" id="masterPlay"></i>
+            <i class="fa-2x fa-solid fa-forward"></i>
+        </div>
+        <!-- icons block ends here -->
+        <div class="songInfo">
+            <img src="image/playing.gif" width="42px" alt="Image not found" id="gif">Back it up!!
+        </div>
+    </div>
+
+    <!-- font awesome kit -->
+    <script src="https://kit.fontawesome.com/52c8444d8e.js" crossorigin="anonymous"></script>
+    <!-- font awesome kit -->
+    <script src="script.js"></script>
+</body>
+
+</html>
