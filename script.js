@@ -16,13 +16,13 @@ let gif = document.getElementById('gif');
 let songItems  = Array.from(document.getElementsByClassName('songItem'));
 
 let songs = [
-    {songName: "Marjaavaan", filePath: "songs/song1.mp3", coverPath: "covers/cover1.jpg"},
-    {songName: "Salam-e-Ishq", filePath: "songs/song2.mp3", coverPath: "covers/cover2.jpg"},
-    {songName: "Naa Jane naa koi", filePath: "songs/song3.mp3", coverPath: "covers/cover3.jpg"},
-    {songName: "Salam-e-Ishq", filePath: "songs/song4.mp3", coverPath: "covers/cover4.jpg"},
-    {songName: "Salam-e-Ishq", filePath: "songs/song5.mp3", coverPath: "covers/cover5.jpg"},
-    {songName: "Salam-e-Ishq", filePath: "songs/song6.mp3", coverPath: "covers/cover6.jpg"},
-    {songName: "Salam-e-Ishq", filePath: "songs/song7.mp3", coverPath: "covers/cover7.jpg"}
+    {songName: "Let me Love You.", filePath: "songs/song1.mp3", coverPath: "covers/cover1.jpg"},
+    {songName: "Cielo", filePath: "songs/song2.mp3", coverPath: "covers/cover2.jpg"},
+    {songName: "Jaane kyun ishq hua", filePath: "songs/song3.mp3", coverPath: "covers/cover3.jpg"},
+    {songName: "We can't forgot your love", filePath: "songs/song4.mp3", coverPath: "covers/cover4.jpg"},
+    {songName: "Janji - Heros Tonight", filePath: "songs/song5.mp3", coverPath: "covers/cover5.jpg"},
+    {songName: "Janji - Heros Tonight Lyrics", filePath: "songs/song6.mp3", coverPath: "covers/cover6.jpg"},
+    {songName: "Back it up!!", filePath: "songs/song7.mp3", coverPath: "covers/cover7.jpg"}
 ] 
 // Using forEach Loop
 songItems.forEach((element, i)=>{ 
