@@ -13,7 +13,7 @@ let masterPlay = document.getElementById('masterPlay');
 let myProgressBar = document.getElementById('myProgressBar');
 let gif = document.getElementById('gif');
 // let masterSongName = document.getElementById('masterSongName');
-// let songItems = Array.from(document.getElementsByClassName('songItem'));
+let songItems = Array.from(document.getElementsByClassName('songItem'));
 
 let songs = [
     {songName: "Salam-e-Ishq", filePath: "songs/song1.mp3", coverPath: "covers/cover1.jpg"},
@@ -24,6 +24,12 @@ let songs = [
     {songName: "Salam-e-Ishq", filePath: "songs/song6.mp3", coverPath: "covers/cover6.jpg"},
     {songName: "Salam-e-Ishq", filePath: "songs/song7.mp3", coverPath: "covers/cover7.jpg"}
 ] 
+// Using forEach Loop
+songItems.forEach((element, i)=>{ 
+    element.getElementsByTagName("img")[0].src = songs[i].coverPath; 
+    element.getElementsByClassName("songName")[0].innerText = songs[i].songName; 
+})
+ 
 
 // Handle play/ pause click
 masterPlay.addEventListener('click', ()=>{
