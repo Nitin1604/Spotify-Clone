@@ -1,64 +1,109 @@
-console.log("Welcome to Spotify Clone");
-// audioElement.play(); --> It will play the audio
+console.log("Welcome to Spotify");
 
-// Intialize the variables
+// Initialize the Variables
 let songIndex = 0;
-
-// ----- Playing the songs by javascript ----- 
 let audioElement = new Audio('songs/song1.mp3');
-// ----- Playing the songs by javascript ----- 
-
-// masterPlay is the id of play button
 let masterPlay = document.getElementById('masterPlay');
 let myProgressBar = document.getElementById('myProgressBar');
 let gif = document.getElementById('gif');
-// let masterSongName = document.getElementById('masterSongName');
-let songItems  = Array.from(document.getElementsByClassName('songItem'));
+let masterSongName = document.getElementById('masterSongName');
+let songItems = Array.from(document.getElementsByClassName('songItem'));
 
 let songs = [
-    {songName: "Let me Love You.", filePath: "songs/song1.mp3", coverPath: "covers/cover1.jpg"},
-    {songName: "Cielo", filePath: "songs/song2.mp3", coverPath: "covers/cover2.jpg"},
-    {songName: "Jaane kyun ishq hua", filePath: "songs/song3.mp3", coverPath: "covers/cover3.jpg"},
-    {songName: "We can't forgot your love", filePath: "songs/song4.mp3", coverPath: "covers/cover4.jpg"},
-    {songName: "Janji - Heros Tonight", filePath: "songs/song5.mp3", coverPath: "covers/cover5.jpg"},
-    {songName: "Janji - Heros Tonight Lyrics", filePath: "songs/song6.mp3", coverPath: "covers/cover6.jpg"},
-    {songName: "Back it up!!", filePath: "songs/song7.mp3", coverPath: "covers/cover7.jpg"}
-] 
-// Using forEach Loop
+    {songName: "Warriyo - Mortals [NCS Release]", filePath: "songs/song1.mp3", coverPath: "covers/cover1.jpg"},
+    {songName: "Cielo - Huma-Huma", filePath: "songs/song2.mp3", coverPath: "covers/cover2.jpg"},
+    {songName: "DEAF KEV - Invincible [NCS Release]-320k", filePath: "songs/song3.mp3", coverPath: "covers/cover3.jpg"},
+    {songName: "Different Heaven & EH!DE - My Heart [NCS Release]", filePath: "songs/song4.mp3", coverPath: "covers/cover4.jpg"},
+    {songName: "Janji-Heroes-Tonight-feat-Johnning-NCS-Release", filePath: "songs/song5.mp3", coverPath: "covers/cover5.jpg"},
+    {songName: "Rabba - Salam-e-Ishq", filePath: "songs/song2.mp3", coverPath: "covers/cover6.jpg"},
+    {songName: "Sakhiyaan - Salam-e-Ishq", filePath: "songs/song2.mp3", coverPath: "covers/cover7.jpg"},
+    {songName: "Bhula Dena - Salam-e-Ishq", filePath: "songs/song2.mp3", coverPath: "covers/cover8.jpg"},
+    {songName: "Tumhari Kasam - Salam-e-Ishq", filePath: "songs/song2.mp3", coverPath: "covers/cover9.jpg"},
+    {songName: "Na Jaana - Salam-e-Ishq", filePath: "songs/song4.mp3", coverPath: "covers/cover10.jpg"},
+]
+
 songItems.forEach((element, i)=>{ 
     element.getElementsByTagName("img")[0].src = songs[i].coverPath; 
-    console.log(element , i)
     element.getElementsByClassName("songName")[0].innerText = songs[i].songName; 
 })
  
 
-// Handle play/ pause click
+// Handle play/pause click
 masterPlay.addEventListener('click', ()=>{
-     if(audioElement.paused || audioElement.currentTime<=0) {
+    if(audioElement.paused || audioElement.currentTime<=0){
         audioElement.play();
-         masterPlay.classList.remove('fa-play')
-         masterPlay.classList.add('fa-pause')
-         gif.style.opacity = 1;
-        }
-        else {
-            audioElement.pause();
-            masterPlay.classList.remove('fa-pause')
-            masterPlay.classList.add('fa-play')
-            gif.style.opacity = 0;
-
-        }
-       
+        masterPlay.classList.remove('fa-play-circle');
+        masterPlay.classList.add('fa-pause-circle');
+        gif.style.opacity = 1;
+    }
+    else{
+        audioElement.pause();
+        masterPlay.classList.remove('fa-pause-circle');
+        masterPlay.classList.add('fa-play-circle');
+        gif.style.opacity = 0;
+    }
 })
-
 // Listen to Events
-audioElement.addEventListener('timeupdate', ()=>{
-    console.log('timeupdate')
-    //  Update seekbar
+audioElement.addEventListener('timeupdate', ()=>{ 
+    // Update Seekbar
     progress = parseInt((audioElement.currentTime/audioElement.duration)* 100); 
     myProgressBar.value = progress;
 })
 
-// Change event in myprogressBar id
 myProgressBar.addEventListener('change', ()=>{
     audioElement.currentTime = myProgressBar.value * audioElement.duration/100;
-}) 
+})
+
+const makeAllPlays = ()=>{
+    Array.from(document.getElementsByClassName('songItemPlay')).forEach((element)=>{
+        element.classList.remove('fa-pause-circle');
+        element.classList.add('fa-play-circle');
+    })
+}
+
+Array.from(document.getElementsByClassName('songItemPlay')).forEach((element)=>{
+    element.addEventListener('click', (e)=>{ 
+        makeAllPlays();
+        songIndex = parseInt(e.target.id);
+        e.target.classList.remove('fa-play-circle');
+        e.target.classList.add('fa-pause-circle');
+        audioElement.src = `songs/song${songIndex+1}.mp3`;
+        masterSongName.innerText = songs[songIndex].songName;
+        audioElement.currentTime = 0;
+        audioElement.play();
+        gif.style.opacity = 1;
+        masterPlay.classList.remove('fa-play-circle');
+        masterPlay.classList.add('fa-pause-circle');
+    })
+})
+
+document.getElementById('next').addEventListener('click', ()=>{
+    if(songIndex>=9){
+        songIndex = 0
+    }
+    else{
+        songIndex += 1;
+    }
+    audioElement.src = `songs/song${songIndex+1}.mp3`;
+    masterSongName.innerText = songs[songIndex].songName;
+    audioElement.currentTime = 0;
+    audioElement.play();
+    masterPlay.classList.remove('fa-play-circle');
+    masterPlay.classList.add('fa-pause-circle');
+
+})
+
+document.getElementById('previous').addEventListener('click', ()=>{
+    if(songIndex<=0){
+        songIndex = 0
+    }
+    else{
+        songIndex -= 1;
+    }
+    audioElement.src = `songs/song${songIndex+1}.mp3`;
+    masterSongName.innerText = songs[songIndex].songName;
+    audioElement.currentTime = 0;
+    audioElement.play();
+    masterPlay.classList.remove('fa-play-circle');
+    masterPlay.classList.add('fa-pause-circle');
+})

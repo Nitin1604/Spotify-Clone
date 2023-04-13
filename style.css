@@ -1,28 +1,31 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+body{
     background-color: antiquewhite;
 }
 
-* {
+*{
     margin: 0;
     padding: 0;
 }
 
-nav {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+nav{
+    font-family: 'Ubuntu', sans-serif;
 }
 
-/* Inserting styles to the nav's ul */
-nav ul {
+nav ul{
     display: flex;
     align-items: center;
     list-style-type: none;
-    height: 50px;
+    height: 65px;
     background-color: black;
-    color: aliceblue;
+    color: white;
 }
 
-/* Inserting styles to the brand's img */
-.brand img {
+nav ul li{
+    padding: 0 12px;
+}
+.brand img{
     width: 44px;
     padding: 0 8px;
 }
@@ -34,87 +37,86 @@ nav ul {
     font-size: 1.3rem;
 }
 
-nav ul li {
-    padding: 0 12px;
-}
-
-.bottom {
-    position: sticky;
-    height: 13 0px;
+.container{
+    min-height: 72vh;
     background-color: black;
     color: white;
+   font-family: 'Varela Round', sans-serif;
+   display: flex;
+   margin: 23px auto;
+   width: 70%;
+   border-radius: 12px;
+   padding: 34px;
+   background-image: url('image/background.jpg');
+}
+
+.bottom{
+    position: sticky;
     bottom: 0;
+    height: 130px;
+    background-color: black;
+    color: white;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 75px;
-    flex-direction: column;
+    flex-direction: column; 
 }
 
-.container {
-    min-height: 72vh;
-    background-color: black;
-    color: rgb(251, 243, 243);
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    display: flex;
-    width: 70%;
-    margin: 23px auto;
-    border-radius: 12px;
-    padding: 34px;
-    background-image: url('image/background.jpg');
+.icons{
+    margin-top: 14px; 
 }
-/* progress bar above the play , backward and forward button */
-#myProgressBar {
-    width: 80vw;
+.icons i{
     cursor: pointer;
 }
 
-.fa-solid {
-    margin-left: 30px;
-}
-
-.icons {
-    margin-top: 14px;
-}
-
-.icons i {
+#myProgressBar{
+    width: 80vw; 
     cursor: pointer;
 }
 
-.songItem {
-    height: 106px;
-    display: flex;
-    background-color: white;
-    width: 241px;
-    color: black;
-    margin: 12px 0;
-    border-radius: 12px;
-    justify-content: space-between;
-}
-
-.songItem img {
-    height: 106px;
-}
-
-.timestamp {
-    margin: 0 23px;
-}
-
-.img7 {
-    width: 107px;
-}
-
-.songItemContainer {
+.songItemContainer{
     margin-top: 74px;
 }
 
-.songInfo {
-    position: absolute;
-    left: 10vw;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+.songItem{
+    height: 50px;
+    display: flex;
+    background-color: white;
+    
+    color: black;
+    margin: 12px 0;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 34px;
 }
 
-.songInfo img {
+.songItem img{
+    width: 43px;
+    margin: 0 23px;
+    border-radius: 34px;
+}
+
+.timestamp{
+    margin: 0 23px;
+}
+
+.timestamp i{
+    cursor: pointer;
+}
+
+.songInfo{
+    position: absolute;
+    left: 10vw;
+    font-family: 'Varela Round', sans-serif;
+}
+
+.songInfo img{
     opacity: 0;
     transition: opacity 0.4s ease-in;
 }
+
+@media only screen and (max-width: 1100px) {
+    body {
+      background-color: red;
+    }
+  }
