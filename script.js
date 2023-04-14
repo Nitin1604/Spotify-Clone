@@ -21,7 +21,8 @@ let songs = [
     {songName: "Bhula Dena - Salam-e-Ishq", filePath: "songs/song2.mp3", coverPath: "covers/cover8.jpg"},
     {songName: "Tumhari Kasam - Salam-e-Ishq", filePath: "songs/song2.mp3", coverPath: "covers/cover9.jpg"},
     {songName: "Na Jaana - Salam-e-Ishq", filePath: "songs/song4.mp3", coverPath: "covers/cover10.jpg"},
-    {songName: "Daku Song", filePath: "songs/Daku Song.mp3", coverPath: "covers/cover11.jpg"}
+    {songName: "Daku Song", filePath: "songs/Daku Song.mp3", coverPath: "covers/cover11.jpg"},
+    {songName: "Ram Siya Ram Bhajan", filePath: "songs/Ram Siya Ram Bhajan.mp3", coverPath: "covers/cover12.jpg"}
 ]
 
 songItems.forEach((element, i)=>{ 
@@ -84,7 +85,7 @@ Array.from(document.getElementsByClassName('songItemPlay')).forEach((element)=>{
 document.getElementById('next').addEventListener('click', ()=>{
 
     // if the index of the song is greater then 0 then play the next songs one by one , whenever the user clicks on the next button
-    if(songIndex>=10){
+    if(songIndex>=11){
         songIndex = 0
     }
     else{
