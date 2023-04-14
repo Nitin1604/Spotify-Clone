@@ -9,6 +9,7 @@ let gif = document.getElementById('gif');
 let masterSongName = document.getElementById('masterSongName');
 let songItems = Array.from(document.getElementsByClassName('songItem'));
 
+// List of songs in the form of arrays
 let songs = [
     {songName: "Warriyo - Mortals [NCS Release]", filePath: "songs/song1.mp3", coverPath: "covers/cover1.jpg"},
     {songName: "Cielo - Huma-Huma", filePath: "songs/song2.mp3", coverPath: "covers/cover2.jpg"},
@@ -20,6 +21,7 @@ let songs = [
     {songName: "Bhula Dena - Salam-e-Ishq", filePath: "songs/song2.mp3", coverPath: "covers/cover8.jpg"},
     {songName: "Tumhari Kasam - Salam-e-Ishq", filePath: "songs/song2.mp3", coverPath: "covers/cover9.jpg"},
     {songName: "Na Jaana - Salam-e-Ishq", filePath: "songs/song4.mp3", coverPath: "covers/cover10.jpg"},
+    {songName: "Daku Song", filePath: "songs/Daku Song.mp3", coverPath: "covers/cover11.jpg"}
 ]
 
 songItems.forEach((element, i)=>{ 
@@ -54,6 +56,7 @@ myProgressBar.addEventListener('change', ()=>{
     audioElement.currentTime = myProgressBar.value * audioElement.duration/100;
 })
 
+// makeAllPlays Function
 const makeAllPlays = ()=>{
     Array.from(document.getElementsByClassName('songItemPlay')).forEach((element)=>{
         element.classList.remove('fa-pause-circle');
@@ -77,8 +80,11 @@ Array.from(document.getElementsByClassName('songItemPlay')).forEach((element)=>{
     })
 })
 
+// if user clicks on the next button then next song will played
 document.getElementById('next').addEventListener('click', ()=>{
-    if(songIndex>=9){
+
+    // if the index of the song is greater then 0 then play the next songs one by one , whenever the user clicks on the next button
+    if(songIndex>=10){
         songIndex = 0
     }
     else{
@@ -93,7 +99,10 @@ document.getElementById('next').addEventListener('click', ()=>{
 
 })
 
+// if user clicks on the previous button then previous song will played
 document.getElementById('previous').addEventListener('click', ()=>{
+
+    // if the index of the song is less then 0 then play previous songs , whenever the user clicks on the previous button
     if(songIndex<=0){
         songIndex = 0
     }
