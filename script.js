@@ -16,14 +16,15 @@ let songs = [
     {songName: "DEAF KEV - Invincible [NCS Release]-320k", filePath: "songs/song3.mp3", coverPath: "covers/cover3.jpg"},
     {songName: "Different Heaven & EH!DE - My Heart [NCS Release]", filePath: "songs/song4.mp3", coverPath: "covers/cover4.jpg"},
     {songName: "Janji-Heroes-Tonight-feat-Johnning-NCS-Release", filePath: "songs/song5.mp3", coverPath: "covers/cover5.jpg"},
-    {songName: "Rabba - Salam-e-Ishq", filePath: "songs/song2.mp3", coverPath: "covers/cover6.jpg"},
-    {songName: "Sakhiyaan - Salam-e-Ishq", filePath: "songs/song2.mp3", coverPath: "covers/cover7.jpg"},
-    {songName: "Bhula Dena - Salam-e-Ishq", filePath: "songs/song2.mp3", coverPath: "covers/cover8.jpg"},
-    {songName: "Tumhari Kasam - Salam-e-Ishq", filePath: "songs/song2.mp3", coverPath: "covers/cover9.jpg"},
-    {songName: "Na Jaana - Salam-e-Ishq", filePath: "songs/song4.mp3", coverPath: "covers/cover10.jpg"},
-    {songName: "Daku Song", filePath: "songs/Daku Song.mp3", coverPath: "covers/cover11.jpg"},
-    {songName: "Ram Siya Ram Bhajan", filePath: "songs/Ram Siya Ram Bhajan.mp3", coverPath: "covers/cover12.jpg"},
-    {songName: "Bandeya Rey Bandeya", filePath: "songs/Bandeya Rey Bandeya.mp3", coverPath: "covers/cover13.jpg"}
+    {songName: "Rabba - Salam-e-Ishq", filePath: "songs/song6.mp3", coverPath: "covers/cover6.jpg"},
+    {songName: "Sakhiyaan - Salam-e-Ishq", filePath: "songs/song7.mp3", coverPath: "covers/cover7.jpg"},
+    {songName: "Bhula Dena - Salam-e-Ishq", filePath: "songs/song8.mp3", coverPath: "covers/cover8.jpg"},
+    {songName: "Tumhari Kasam - Salam-e-Ishq", filePath: "songs/song9.mp3", coverPath: "covers/cover9.jpg"},
+    {songName: "Na Jaana - Salam-e-Ishq", filePath: "songs/song10.mp3", coverPath: "covers/cover10.jpg"},
+    {songName: "Daku Song", filePath: "songs/song11.mp3", coverPath: "covers/cover11.jpg"},
+    {songName: "Ram Siya Ram Bhajan", filePath: "songs/song12.mp3", coverPath: "covers/cover12.jpg"},
+    {songName: "Bandeya Rey Bandeya", filePath: "songs/song13.mp3", coverPath: "covers/cover13.jpg"},
+    {songName: "Shyama Aan Baso Vrindavan Mein", filePath: "songs/song14.mp3", coverPath: "covers/cover14.jpg"}
 ]
 
 songItems.forEach((element, i)=>{ 
@@ -86,7 +87,7 @@ Array.from(document.getElementsByClassName('songItemPlay')).forEach((element)=>{
 document.getElementById('next').addEventListener('click', ()=>{
 
     // if the index of the song is greater then 0 then play the next songs one by one , whenever the user clicks on the next button
-    if(songIndex>=12){
+    if(songIndex>=13){
         songIndex = 0
     }
     else{
