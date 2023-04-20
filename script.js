@@ -20,7 +20,7 @@ let songs = [
     {songName: "Sakhiyaan - Salam-e-Ishq", filePath: "songs/song7.mp3", coverPath: "covers/cover7.jpg"},
     {songName: "Bhula Dena - Salam-e-Ishq", filePath: "songs/song8.mp3", coverPath: "covers/cover8.jpg"},
     {songName: "Tumhari Kasam - Salam-e-Ishq", filePath: "songs/song9.mp3", coverPath: "covers/cover9.jpg"},
-    {songName: "Lehra Do Sarkashi Ka Parcham Lehra Do", filePath: "songs/song1.mp3", coverPath: "covers/cover10.jpg"},
+    {songName: "Lehra Do Sarkashi Ka Parcham Lehra Do", filePath: "songs/song10.mp3", coverPath: "covers/cover10.jpg"},
     {songName: "Shaabaashiyaan Misson Mangal", filePath: "songs/song11.mp3", coverPath: "covers/cover11.jpg"},
     {songName: "Ram Siya Ram Bhajan", filePath: "songs/song12.mp3", coverPath: "covers/cover12.jpg"},
     {songName: "Bandeya Rey Bandeya", filePath: "songs/song13.mp3", coverPath: "covers/cover13.jpg"},
