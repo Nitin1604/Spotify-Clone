@@ -4,7 +4,9 @@ ________________________________________________________________________________
 I have made this project with the help of pure HTML , CSS and JavaScript 
 __________________________________________________________________________________________________________________
 In this project i have inserted 14 songs at the left most corner of the web page and having background image of music 
-such that ui of web page become interactive and awesome look and wrap all fouteen songs in a container. Within this 
+such that ui of web page become interactive and awesome look. 
+__________________________________________________________________________________________________________________
+I have wrap all fouteen songs with class as container. Within this 
 container there are fourteen songs and each songs has play button to listen songs and pause button is enabled when user
 clicks on the play button to pause it. At the bottom bar i have inserted three buttons , one is for previous button to 
 play previous songs and pause button to pause the music and play button to play the button. This play button is enabled
