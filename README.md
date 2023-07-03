@@ -17,4 +17,4 @@ Beside these three button i have also inserted a playing gif to indicates that s
 that music has been stopped. Playing gif is controlled by the button i.e play and pause button. When button is on play mode the playing gif
 will keep on running and when button is on pause mode the playing gif the playing gif will disappear now.
 ___________________________________________________________________________________________________________________________________________
-        
+         
