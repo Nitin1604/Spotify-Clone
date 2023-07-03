@@ -1,6 +1,6 @@
 # Spotify-Clone
 I have made this project with the help of HTML, CSS , JavaScript and Font Awesome.
-
+__________________________________________________________________________________________________________________
 I have made this project with the help of pure HTML , CSS and JavaScript 
 In this project i have inserted 14 songs at the left most corner of the web page and having background image of music 
 such that ui of web page become interactive and awesome look and wrap all fouteen songs in a container. Within this 
