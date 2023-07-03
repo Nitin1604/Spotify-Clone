@@ -18,3 +18,4 @@ that music has been stopped. Playing gif is controlled by the button i.e play an
 will keep on running and when button is on pause mode the playing gif the playing gif will disappear now.
 ___________________________________________________________________________________________________________________________________________
        
+ 
