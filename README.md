@@ -8,7 +8,7 @@ In this project i have inserted 14 songs at the left most corner of the web page
 such that ui of web page become interactive and awesome look. 
 __________________________________________________________________________________________________________________
 I have wrap all fouteen songs with class as container. Within this container there are fourteen songs and each songs has 
-play button to listen songs and pause button.        
+play button to listen songs and pause button.         
 ___________________________________________________________________________________________________________________________________________
 It is enabled when user clicks on the play button to listen the songs and for stopping the music , user will pause the button. 
 At the bottom bar i have inserted three buttons , one is for previous button to play previous songs and pause button to pause the music 
