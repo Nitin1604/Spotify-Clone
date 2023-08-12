@@ -1,5 +1,5 @@
 # Spotify-Clone                                                                                                                                                                                                        
-I have made this project with the help of HTML, CSS , JavaScript and Font Awesome.                                           
+I have made this project with the help of HTML, CSS , JavaScript and Font Awesome.                                             
 __________________________________________________________________________________________________________________
 I have made this project with the help of pure HTML , CSS and JavaScript 
 __________________________________________________________________________________________________________________
